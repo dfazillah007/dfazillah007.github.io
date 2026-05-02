@@ -83,10 +83,11 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   display:flex;align-items:center;gap:8px
 }
 .nav-logo-mark{
-  width:32px;height:32px;border-radius:8px;background:var(--crimson);
+  width:34px;height:34px;border-radius:50%;
   display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
-  font-size:.72rem;font-weight:700;color:#fff;letter-spacing:-.5px
+  overflow:hidden;border:2px solid var(--crimson);
 }
+.nav-logo-mark img{width:100%;height:100%;object-fit:cover}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-links a{
   font-size:.875rem;font-weight:500;color:var(--text-2);
@@ -143,18 +144,13 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 }
 .hero-content{position:relative;z-index:1;max-width:820px}
 .hero-avatar{
-  width:88px;height:88px;border-radius:22px;
-  background:linear-gradient(135deg,var(--crimson),#8B1A1A);
+  width:100px;height:100px;border-radius:50%;
   display:inline-flex;align-items:center;justify-content:center;
-  font-family:var(--font-h);font-size:2rem;font-weight:700;color:#fff;
-  letter-spacing:-1px;margin-bottom:28px;
-  box-shadow:0 0 0 1px rgba(192,57,43,.4), 0 8px 32px rgba(192,57,43,.25);
-  position:relative;
+  margin-bottom:28px;overflow:hidden;position:relative;
+  box-shadow:0 0 0 3px var(--crimson), 0 0 0 6px rgba(192,57,43,.2), 0 8px 32px rgba(192,57,43,.3);
 }
-.hero-avatar::after{
-  content:'';position:absolute;inset:-3px;border-radius:24px;
-  border:1px solid rgba(192,57,43,.3);pointer-events:none
-}
+.hero-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-badge{margin-left:8px}
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
   padding:6px 14px;border:1px solid var(--border);border-radius:100px;
@@ -428,7 +424,7 @@ footer span{color:var(--crimson)}
 <nav id="navbar" role="navigation" aria-label="Navigasi utama">
   <div class="nav-inner">
     <a class="nav-logo" href="#hero" aria-label="Ke atas">
-      <span class="nav-logo-mark" aria-hidden="true">DF</span>Dendri Fazillah
+      <span class="nav-logo-mark"><img src="profile.jpg" alt="Dendri Fazillah"></span>Dendri Fazillah
     </a>
     <ul class="nav-links" role="list">
       <li><a href="#about">Tentang</a></li>
@@ -463,10 +459,12 @@ footer span{color:var(--crimson)}
   <div class="hero-glow-2" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-avatar" aria-hidden="true">DF</div>
+      <div class="hero-avatar">
+        <img src="profile.jpg" alt="Foto profil Dendri Fazillah">
+      </div>
       <div class="hero-badge" role="status">
         <span class="badge-dot" aria-hidden="true"></span>
-        Terbuka untuk Peluang Kerja
+        Open for opportunities
       </div>
       <h1 class="hero-name">
         DENDRI<br><span class="accent">FAZILLAH</span>
